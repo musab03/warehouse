@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-function Cards() {
+function Card() {
   return (
     <>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -9,7 +9,7 @@ function Cards() {
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
               <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl className:text-neutral-200">
-                Fully customizable rules to match your unique needs
+              Tailored Solutions to Meet Your Warehouse Needs
               </h2>
 
               <nav
@@ -51,8 +51,7 @@ function Cards() {
                         Advanced tools
                       </span>
                       <span className="block mt-1 text-gray-800 className:hs-tab-active:text-gray-200 className:text-neutral-200">
-                        Use Preline thoroughly thought and automated libraries
-                        to manage your businesses.
+                      Leverage cutting-edge automation and inventory management systems to optimize your warehouse operations.
                       </span>
                     </span>
                   </span>
@@ -88,8 +87,7 @@ function Cards() {
                         Smart dashboards
                       </span>
                       <span className="block mt-1 text-gray-800 className:hs-tab-active:text-gray-200 className:text-neutral-200">
-                        Quickly Preline sample components, copy-paste codes, and
-                        start right off.
+                      Easily access intuitive dashboards, streamline processes, and make data-driven decisions in real time.
                       </span>
                     </span>
                   </span>
@@ -128,8 +126,7 @@ function Cards() {
                         Powerful features
                       </span>
                       <span className="block mt-1 text-gray-800 className:hs-tab-active:text-gray-200 className:text-neutral-200">
-                        Reduce time and effort on building modern look design
-                        with Preline only.
+                      Save time and effort with robust tools designed to enhance efficiency and maximize your warehouse's potential.
                       </span>
                     </span>
                   </span>
@@ -203,4 +200,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Card;

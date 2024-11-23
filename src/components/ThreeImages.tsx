@@ -11,7 +11,7 @@ function ThreeImages() {
             <div className="grid grid-cols-12 gap-2 sm:gap-6 items-center lg:-translate-x-10">
               <div className="col-span-4">
                 <img
-                  className="rounded-xl"
+                  className="rounded-xl "
                   src="https://images.pexels.com/photos/1267324/pexels-photo-1267324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Features Image"
                 />
@@ -39,11 +39,10 @@ function ThreeImages() {
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2 md:space-y-4">
                 <h2 className="font-bold text-3xl lg:text-4xl text-gray-800 :text-neutral-200">
-                  Collaborative tools to design user experience
+                Streamlined Tools for Optimizing Warehouse Operations
                 </h2>
                 <p className="text-gray-500 :text-neutral-500">
-                  Use our tools to explore your ideas and make your vision come
-                  true. Then share your work easily.
+                Utilize our advanced solutions to enhance efficiency, reduce downtime, and maximize productivity. Share your achievements seamlessly.
                 </p>
               </div>
 
@@ -67,8 +66,7 @@ function ThreeImages() {
                   </span>
                   <div className="grow">
                     <span className="text-sm sm:text-base text-gray-500 :text-neutral-500">
-                      <span className="font-bold">Less routine</span> – more
-                      creativity
+                      <span className="font-bold">Focus on Growth </span> – Leave the Routine to Us
                     </span>
                   </div>
                 </li>
@@ -92,7 +90,7 @@ function ThreeImages() {
                   </span>
                   <div className="grow">
                     <span className="text-sm sm:text-base text-gray-500 :text-neutral-500">
-                      Hundreds of thousands saved
+                    Save Thousands of Hours
                     </span>
                   </div>
                 </li>
@@ -116,7 +114,7 @@ function ThreeImages() {
                   </span>
                   <div className="grow">
                     <span className="text-sm sm:text-base text-gray-500 :text-neutral-500">
-                      Scale budgets{" "}
+                    Automate repetitive tasks and streamline workflows to focus on scaling your warehouse operations{" "}
                       <span className="font-bold">efficiently</span>
                     </span>
                   </div>

@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero"
-import Cards from "@/components/Cards";
+import Card from "@/components/Card";
 import Image from "next/image";
 import Clients from "@/components/Clients";
 import OfferSection from "@/components/OfferSection";
@@ -13,7 +13,7 @@ export default function Home() {
     <Header/>
     <Hero/>
     <OfferSection/>
-    <Cards/>
+    <Card/>
     <Clients/>
     <ThreeImages/>
     <Approach/>

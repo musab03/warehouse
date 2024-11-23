@@ -42,14 +42,13 @@ function OfferSection() {
             </div>
             <div className="p-4 md:p-6">
               <span className="block mb-1 text-xs font-semibold uppercase text-blue-600 :text-blue-500">
-                Atlassian API
+              Inventory Management
               </span>
               <h3 className="text-xl font-semibold text-gray-800 :text-neutral-300 :hover:text-white">
-                Atlassian
+              Real-Time Tracking
               </h3>
               <p className="mt-3 text-gray-500 :text-neutral-500">
-                A software that develops products for software developers and
-                developments.
+              Keep your stock updated with real-time inventory tracking and reporting.
               </p>
             </div>
             <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 :border-neutral-700 :divide-neutral-700">
@@ -57,13 +56,13 @@ function OfferSection() {
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none :bg-neutral-900 :border-neutral-700 :text-white :hover:bg-neutral-800 :focus:bg-neutral-800"
                 href="#"
               >
-                View sample
+               View Features
               </a>
               <a
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none :bg-neutral-900 :border-neutral-700 :text-white :hover:bg-neutral-800 :focus:bg-neutral-800"
                 href="#"
               >
-                View API
+                Get Started
               </a>
             </div>
           </div>
@@ -111,13 +110,13 @@ function OfferSection() {
             </div>
             <div className="p-4 md:p-6">
               <span className="block mb-1 text-xs font-semibold uppercase text-rose-600 :text-rose-500">
-                Asana API
+              Order Fulfillment
               </span>
               <h3 className="text-xl font-semibold text-gray-800 :text-neutral-300 :hover:text-white">
-                Asana
+              Efficient Operations
               </h3>
               <p className="mt-3 text-gray-500 :text-neutral-500">
-                Track tasks and projects, use agile boards, measure progress.
+              Streamline order processing and ensure timely deliveries with optimized workflows.
               </p>
             </div>
             <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 :border-neutral-700 :divide-neutral-700">
@@ -125,13 +124,13 @@ function OfferSection() {
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none :bg-neutral-900 :border-neutral-700 :text-white :hover:bg-neutral-800 :focus:bg-neutral-800"
                 href="#"
               >
-                View sample
+               Learn More
               </a>
               <a
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none :bg-neutral-900 :border-neutral-700 :text-white :hover:bg-neutral-800 :focus:bg-neutral-800"
                 href="#"
               >
-                View API
+                 Request Demo
               </a>
             </div>
           </div>
@@ -175,13 +174,13 @@ function OfferSection() {
             </div>
             <div className="p-4 md:p-6">
               <span className="block mb-1 text-xs font-semibold uppercase text-amber-500">
-                Slack API
+              Storage Solutions
               </span>
               <h3 className="text-xl font-semibold text-gray-800 :text-neutral-300 :hover:text-white">
-                Slack
+              Flexible Space Options
               </h3>
               <p className="mt-3 text-gray-500 :text-neutral-500">
-                Email collaboration and email service desk made easy.
+              Choose from a variety of storage plans to fit your business needs.
               </p>
             </div>
             <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 :border-neutral-700 :divide-neutral-700">
@@ -189,13 +188,13 @@ function OfferSection() {
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none :bg-neutral-900 :border-neutral-700 :text-white :hover:bg-neutral-800 :focus:bg-neutral-800"
                 href="#"
               >
-                View sample
+               Explore Plans
               </a>
               <a
                 className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none :bg-neutral-900 :border-neutral-700 :text-white :hover:bg-neutral-800 :focus:bg-neutral-800"
                 href="#"
               >
-                View API
+                Contact Us
               </a>
             </div>
           </div>

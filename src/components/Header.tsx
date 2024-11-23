@@ -70,7 +70,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white fixed top-0 left-0 right-0 z-50">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -80,7 +80,7 @@ export default function Example() {
             <span className="sr-only">Your Company</span>
             <img
               alt=""
-              src="https://www.dhl.com/content/dam/dhl/global/core/images/logos/dhl-logo.svg"
+              src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
               className="h-6 w-auto"
             />
           
