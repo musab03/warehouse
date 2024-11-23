@@ -1,5 +1,4 @@
-
-"use client";
+"use client"
 import Image from "next/image";
 import heroImg from "../../public/1.jpg";
 const Hero = () => {
@@ -46,7 +45,7 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
+            {/* <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
               <div className="py-5">
                 <div className="flex gap-x-1">
                   <svg
@@ -254,7 +253,7 @@ const Hero = () => {
                   </svg>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative ms-4">

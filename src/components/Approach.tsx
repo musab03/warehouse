@@ -4,7 +4,7 @@ import React from "react";
 function Approach() {
   return (
     <>
-      <div className="bg-neutral-900">
+      <div className="bg-neutral-900 max-w-[100rem] mx-auto w-full justify-center items-center">
         <div className="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto">
           <div className="max-w-3xl mb-10 lg:mb-14">
             <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
