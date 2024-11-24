@@ -56,7 +56,7 @@ function OfferSection() {
             <div className="aspect-w-16 aspect-h-10">
               <img
                 className="w-full object-cover rounded-xl"
-                src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://thumbs.dreamstime.com/b/forklift-driver-loading-package-boxes-cargo-container-cargo-trailer-truck-parked-loading-dock-warehouse-forklift-driver-213932718.jpg"
                 alt="Blog Image"
               />
             </div>

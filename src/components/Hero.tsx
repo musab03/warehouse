@@ -9,7 +9,7 @@ const Hero = () => {
           <div>
             <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight ">
               Start your journey with{" "}
-              <span className="text-blue-600">Tulip</span>
+              <span className="text-blue-600">Tulip Bond</span>
             </h1>
             <p className="mt-3 text-lg text-gray-800 ">
             Optimize Your Operations with Trusted Warehouse Management Solutions
