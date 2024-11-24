@@ -17,7 +17,7 @@ function OfferSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <a
-            className="group hover:scale-125 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
+            className="group  hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
             href="#"
           >
             <div className="aspect-w-16 aspect-h-10">
@@ -50,7 +50,7 @@ function OfferSection() {
           </a>
 
           <a
-            className="group hover:scale-125 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
+            className="group  hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
             href="#"
           >
             <div className="aspect-w-16 aspect-h-10">
@@ -82,7 +82,7 @@ function OfferSection() {
           </a>
 
           <a
-            className="group hover:scale-125 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
+            className="group  hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
             href="#"
           >
             <div className="aspect-w-16 aspect-h-10">
