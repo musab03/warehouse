@@ -62,7 +62,7 @@ function Approach() {
                 <div className="grow pt-0.5 pb-8 sm:pb-12">
                   <p className="text-sm lg:text-base text-neutral-400">
                     <span className="text-white">
-                    Solution Development and Testing:
+                    Services We Provide
                     </span>
                     Design and test customized warehouse solutions, ensuring they meet your unique operational needs.
                   </p>
@@ -80,8 +80,9 @@ function Approach() {
 
                 <div className="grow pt-0.5 pb-8 sm:pb-12">
                   <p className="text-sm md:text-base text-neutral-400">
-                    <span className="text-white">Implementation and Training:</span>
-                    Deploy the solutions with a robust implementation plan, including staff training to maximize adoption and effectiveness.
+                    <span className="text-white">Solutions and 24/7 access:</span>
+                    Web Base Inventory Access For Clients
+
                   </p>
                 </div>
               </div>
@@ -98,7 +99,7 @@ function Approach() {
                 <div className="grow pt-0.5 pb-8 sm:pb-12">
                   <p className="text-sm md:text-base text-neutral-400">
                     <span className="text-white">Monitoring and Optimization:</span>
-                    Track performance metrics, gather feedback, and refine operations to ensure peak efficiency and scalability.
+                    C.C TV Cameras Recording 24/7 Track performance metrics, gather feedback, and refine operations to ensure peak efficiency and scalability.
                   </p>
                 </div>
               </div>
