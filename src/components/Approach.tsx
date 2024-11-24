@@ -131,6 +131,15 @@ function Approach() {
                 </svg>
                 Schedule a call
               </a>
+              <div className="tracking-tighter mt-3 ml-3 font-sans bg-transparent border p-3 rounded-tl-xl rounded-br-xl flex flex-col text-white gap-1 lg:flex-row">
+               <span>Email:</span> 
+              <a className="underline hover:text-yellow-300" href="">tulip.org</a>
+              <span>Phone:</span>
+              <p className="hover:text-yellow-300 cursor-pointer">(021) 32570409</p>
+              <span className="underline">Address:</span>
+              <p className="hover:text-yellow-300 cursor-pointer">Address: Plot # F, 237, Metroville Labor Colony Sindh Industrial Trading Estate, Karachi, Karachi City, Sindh</p>
+              </div>
+              
             </div>
           </div>
         </div>
