@@ -6,7 +6,7 @@ function Clients() {
     <>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6">
-          <h2 className="text-gray-600 className:text-neutral-400">
+          <h2 className="text-zinc-900 className:text-neutral-400 ">
           Trusted by logistics professionals, businesses, and more than 99,000 warehouse operators worldwide.
           </h2>
         </div>
