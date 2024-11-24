@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero"
 import Card from "@/components/Card";
-import Image from "next/image";
 import Clients from "@/components/Clients";
 import OfferSection from "@/components/OfferSection";
 import Approach from "@/components/Approach";

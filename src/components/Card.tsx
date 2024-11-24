@@ -126,7 +126,7 @@ function Card() {
                         Powerful features
                       </span>
                       <span className="block mt-1 text-gray-800 className:hs-tab-active:text-gray-200 className:text-neutral-200">
-                      Save time and effort with robust tools designed to enhance efficiency and maximize your warehouse's potential.
+                      Save time and effort with robust tools designed to enhance efficiency and maximize your warehouse&apos;s potential.
                       </span>
                     </span>
                   </span>

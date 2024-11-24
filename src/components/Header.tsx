@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import heroImg from "../../public/tulips.png";
-import Image from "next/image";
+
 import {
   Dialog,
   DialogPanel,
