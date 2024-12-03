@@ -4,7 +4,7 @@ import React from "react";
 function Card() {
   return (
     <>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
         <div className="relative p-6 md:p-16">
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
@@ -126,7 +126,7 @@ function Card() {
                         Powerful features
                       </span>
                       <span className="block mt-1 text-gray-800 className:hs-tab-active:text-gray-200 className:text-neutral-200">
-                      Save time and effort with robust tools designed to enhance efficiency and maximize your warehouse's potential.
+                      Save time and effort with robust tools designed to enhance efficiency and maximize your warehouse&apos;s potential.
                       </span>
                     </span>
                   </span>

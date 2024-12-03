@@ -4,9 +4,10 @@ import React from "react";
 function Clients() {
   return (
     <>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6">
-          <h2 className="text-zinc-900 className:text-neutral-400 ">
+          <h1 className=" text-xl md:text-3xl font-bold  text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500 ">Our Clients</h1>
+          <h2 className="text-zinc-900 className:text-neutral-400 sm:text-lg md:text-xl ">
           Trusted by logistics professionals, businesses, and more than 99,000 warehouse operators worldwide.
           </h2>
         </div>
