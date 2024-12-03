@@ -5,6 +5,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    
   ],
   theme: {
     extend: {
@@ -13,9 +14,14 @@ export default {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        'parallex':'url("/bg_banner.jpg")',
+        'parallex': 'url("/bg_banner.jpg")',
+        
+      },
+      fontFamily: {
+        'Brico':["Jacques Francois ShadowBricolage Grotesque", "serif"]
       },
     },
   },
-  plugins: [],
+  plugins: [ require('taos/plugin')],
 } satisfies Config;
+

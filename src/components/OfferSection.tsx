@@ -4,7 +4,7 @@ import React from "react";
 function OfferSection() {
   return (
     <>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-20 bg-parallex bg-fixed bg-cover bg-center  ">
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-10 bg-parallex bg-fixed bg-cover bg-center ">
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
           <h2 className="text-2xl font-bold md:text-5xl md:leading-tight text-white :text-white">
           We Provide Logistics Services Focused On Quality
@@ -17,10 +17,10 @@ function OfferSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <a
-            className="group  hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10"
+            className="group  hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition :hover:bg-white/10 :focus:bg-white/10 "
             href="#"
           >
-            <div className="aspect-w-16 aspect-h-10">
+            <div className="aspect-w-16 aspect-h-10  ">
               <img
                 className="w-full object-cover rounded-xl"
                 src="https://cdn.pixabay.com/photo/2020/10/01/17/11/store-5619201_1280.jpg"
