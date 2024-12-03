@@ -9,6 +9,7 @@ export default {
   ],
   theme: {
     extend: {
+      
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -19,6 +20,15 @@ export default {
       },
       fontFamily: {
         'Brico':["Jacques Francois ShadowBricolage Grotesque", "serif"]
+      },
+      animation: {
+        'slide-down': 'slide-down 1s ease-in-out forwards',
+      },
+      keyframes: {
+        'slide-down': {
+          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
     },
   },

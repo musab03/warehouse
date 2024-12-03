@@ -4,7 +4,7 @@ import React from "react";
 function OfferSection() {
   return (
     <>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-10 bg-parallex bg-fixed bg-cover bg-center ">
+      <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-10 bg-parallex bg-fixed bg-cover bg-center ">
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
           <h2 className="text-2xl font-bold md:text-5xl md:leading-tight text-white :text-white">
           We Provide Logistics Services Focused On Quality

@@ -45,19 +45,22 @@ export default function HeroBanner() {
           animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <h1 className="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl leading-tight">
+        <h1 className="text-3xl font-extrabold text-white sm:text-4xl md:text-7xl leading-tight">
           Welcome to{" "}
           <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-orange-500">
             Tulip
           </span>
         </h1>
-        <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-4  text-gray-300 max-w-2xl mx-auto leading-relaxed text-xl md:text-3xl ">
           Custom Bonded & Private Warehouse
+        </p>
+        <p className="mt-4  text-gray-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-lg ">
+        Dedicated to service since......1984  
         </p>
         <div className="mt-6 flex justify-center">
           <Link
             href="/contactus"
-            className="bg-gradient-to-r from-red-800 to-orange-500 hover:text-black hover:bg-white text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:scale-105 duration-300 ease-in-out"
+            className="bg-gradient-to-r from-red-600 to-orange-500 hover:text-black hover:bg-white text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:scale-105 duration-300 ease-in-out"
           >
             Get in Touch
           </Link>

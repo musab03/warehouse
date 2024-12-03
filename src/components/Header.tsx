@@ -36,7 +36,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Home</span>
-            <img alt="Logo" src="/logo.svg" className="h-6 w-auto" />
+            <img alt="Logo" src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" className="h-6 w-auto" />
           </Link>
         </div>
 
@@ -56,9 +56,9 @@ export default function Example() {
         <div className="hidden lg:flex lg:gap-x-12 cursor-pointer">
           <Link
             href="/"
-            className={`text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
+            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
               isActive("/")
-                ? "text-red-600"
+                ? "text-red-600 text-3xl"
                 : isScrolled
                 ? "text-black"
                 : "text-white"
@@ -68,9 +68,9 @@ export default function Example() {
           </Link>
           <Link
             href="/about"
-            className={`text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
+            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
               isActive("/about")
-                ? "text-red-600"
+                ? "text-red-600 text-3xl"
                 : isScrolled
                 ? "text-black"
                 : "text-white"
@@ -80,9 +80,9 @@ export default function Example() {
           </Link>
           <Link
             href="/services"
-            className={`text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
+            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
               isActive("/services")
-                ? "text-red-600"
+                ? "text-red-600 text-3xl"
                 : isScrolled
                 ? "text-black"
                 : "text-white"
@@ -92,9 +92,9 @@ export default function Example() {
           </Link>
           <Link
             href="/getquote"
-            className={`text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
+            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
               isActive("/getquote")
-                ? "text-red-600"
+                ? "text-red-600 text-3xl"
                 : isScrolled
                 ? "text-black"
                 : "text-white"
