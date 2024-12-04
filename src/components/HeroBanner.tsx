@@ -10,17 +10,7 @@ export default function HeroBanner() {
   useEffect(() => {
     setAnimate(true);
 
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 40) {
-          clearInterval(interval);
-          return 40;
-        }
-        return prev + 1;
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
+   
   }, []);
 
   return (

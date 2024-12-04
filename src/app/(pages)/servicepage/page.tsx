@@ -1,97 +1,134 @@
-"use client";
+"use client"
+import { useEffect, useState, useRef, RefCallback } from "react";
+import Banner from "./components/Banner";
 
-import { useEffect, useState } from "react";
+// Define the type for a service item
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+}
 
 const ServicesPage = () => {
-  const [animate, setAnimate] = useState(false);
+  // State to track the selected card
+  const [selectedCard, setSelectedCard] = useState<string | null>(null);
+
+  // State to track which cards are visible on scroll
+  const [visibleCards, setVisibleCards] = useState<{ [key: string]: boolean }>({});
+
+  // Refs to store references to each card div element
+  const cardRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   useEffect(() => {
-    setAnimate(true); // Trigger animation after the component has mounted
+    // Intersection Observer setup
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleCards((prev) => ({
+              ...prev,
+              [entry.target.id]: true,
+            }));
+            observer.unobserve(entry.target); // Stop observing once the card is visible
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the card is visible
+    );
+
+    // Observe each card
+    Object.values(cardRefs.current).forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect(); // Cleanup observer on unmount
   }, []);
+
+  const handleCardClick = (id: string) => {
+    setSelectedCard(id);
+  };
+
+  const services: Service[] = [
+    {
+      id: "acre-land",
+      title: "2 Acre Land",
+      description:
+        "This expansive 2-acre property offers the perfect space for various business operations. Whether you need outdoor storage, parking, or open-air activities, this secure, well-maintained space is designed to support your growth and provide the room you need for your endeavors.",
+    },
+    {
+      id: "rcc-shed",
+      title: "70,000 SQ FT RCC Shed",
+      description:
+        "Our 70,000 sq ft RCC shed is built with industrial-grade materials to accommodate a variety of business needs. Whether it's manufacturing, warehousing, or logistics, this space provides the infrastructure and flexibility to scale your operations.",
+    },
+    {
+      id: "open-area",
+      title: "35,000 SQ FT Open Area",
+      description:
+        "This open space of 35,000 sq ft is perfect for staging events, managing logistics, or providing additional workspace. It offers a flexible solution that adapts to your unique business requirements, all within a safe and secure environment.",
+    },
+    {
+      id: "security",
+      title: "24/7 Armed & Unarmed Security",
+      description:
+        "Your peace of mind is our top priority. With professional, 24/7 security services, both armed and unarmed, we ensure the safety of your property, assets, and personnel at all times. Our security team is well-trained and highly responsive to any situation.",
+    },
+    {
+      id: "cctv",
+      title: "CCTV Surveillance",
+      description:
+        "Our advanced CCTV surveillance system is strategically placed throughout the facility to monitor all key areas. This provides additional security and allows you to keep an eye on your property from anywhere, anytime.",
+    },
+    {
+      id: "fire-safety",
+      title: "Fire Safety Infrastructure",
+      description:
+        "The facility is equipped with state-of-the-art fire safety systems, including fire extinguishers and emergency protocols, to ensure that you’re always prepared in case of an emergency. Your safety is always our top priority.",
+    },
+    {
+      id: "loading-facility",
+      title: "Loading & Unloading Facility",
+      description:
+        "Our loading and unloading facilities are equipped with ramps and heavy-duty equipment to make your logistics process smoother. This enables efficient handling of goods and ensures that your operations run without delays.",
+    },
+    {
+      id: "lifter-facility",
+      title: "On-Site Lifter Facility",
+      description:
+        "Our on-site lifter facility is designed to assist with the heavy lifting of materials, goods, and equipment. This ensures that your team can safely and efficiently handle any large items without additional outsourcing.",
+    },
+  ];
+
   return (
-    <section className={`py-20 px-5 md:px-20 ${
-      animate ? 'animate-slide-down' : ''
-    }`}>
-      <div id="acre-land" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">2 Acre Land</h2>
-        <p>
-          This expansive 2-acre property offers the perfect space for various
-          business operations. Whether you need outdoor storage, parking, or
-          open-air activities, this secure, well-maintained space is designed to
-          support your growth and provide the room you need for your endeavors.
-        </p>
-      </div>
-
-      <div id="rcc-shed" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">70,000 SQ FT RCC Shed</h2>
-        <p>
-          Our 70,000 sq ft RCC shed is built with industrial-grade materials to
-          accommodate a variety of business needs. Whether it's manufacturing,
-          warehousing, or logistics, this space provides the infrastructure and
-          flexibility to scale your operations.
-        </p>
-      </div>
-
-      <div id="open-area" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">35,000 SQ FT Open Area</h2>
-        <p>
-          This open space of 35,000 sq ft is perfect for staging events,
-          managing logistics, or providing additional workspace. It offers a
-          flexible solution that adapts to your unique business requirements, all
-          within a safe and secure environment.
-        </p>
-      </div>
-
-      <div id="security" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">24/7 Armed & Unarmed Security</h2>
-        <p>
-          Your peace of mind is our top priority. With professional, 24/7
-          security services, both armed and unarmed, we ensure the safety of your
-          property, assets, and personnel at all times. Our security team is
-          well-trained and highly responsive to any situation.
-        </p>
-      </div>
-
-      <div id="cctv" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">CCTV Surveillance</h2>
-        <p>
-          Our advanced CCTV surveillance system is strategically placed
-          throughout the facility to monitor all key areas. This provides
-          additional security and allows you to keep an eye on your property from
-          anywhere, anytime.
-        </p>
-      </div>
-
-      <div id="fire-safety" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">Fire Safety Infrastructure</h2>
-        <p>
-          The facility is equipped with state-of-the-art fire safety systems,
-          including fire extinguishers and emergency protocols, to ensure that
-          you’re always prepared in case of an emergency. Your safety is always
-          our top priority.
-        </p>
-      </div>
-
-      <div id="loading-facility" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">Loading & Unloading Facility</h2>
-        <p>
-          Our loading and unloading facilities are equipped with ramps and
-          heavy-duty equipment to make your logistics process smoother. This
-          enables efficient handling of goods and ensures that your operations
-          run without delays.
-        </p>
-      </div>
-
-      <div id="lifter-facility" className="service-section mb-10">
-        <h2 className="text-3xl font-bold">On-Site Lifter Facility</h2>
-        <p>
-          Our on-site lifter facility is designed to assist with the heavy
-          lifting of materials, goods, and equipment. This ensures that your team
-          can safely and efficiently handle any large items without additional
-          outsourcing.
-        </p>
-      </div>
-    </section>
+    <>
+      <Banner/>
+      <section className="py-20 px-5 md:px-20 max-w-[100rem] mx-auto">
+        <div className="grid gap-10 md:grid-cols-1 sm:grid-cols-3 ">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              id={service.id}
+              ref={(el: HTMLDivElement | null) => {
+                cardRefs.current[service.id] = el;
+              }}
+              onClick={() => handleCardClick(service.id)}
+              className={`service-card p-6 transition-all duration-300 bg-gradient-to-bl from-red-600 via-transparent text-black rounded-lg shadow-md cursor-pointer transform hover:scale-105 ${
+                selectedCard === service.id
+                  ? "text-white bg-black"
+                  : "bg-white text-gray-900"
+              } ${
+                visibleCards[service.id]
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-10 scale-95"
+              }`}
+            >
+              <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

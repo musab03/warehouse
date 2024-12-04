@@ -82,8 +82,8 @@ export default function Example() {
           <Link href="/servicepage" className={getLinkClassName("/servicepage")}>
             Services
           </Link>
-          <Link href="/getquote" className={getLinkClassName("/getquote")}>
-            Get a Quote
+          <Link href="/contactus" className={getLinkClassName("/contactus")}>
+            Contact us
           </Link>
         </div>
       </nav>
@@ -144,13 +144,13 @@ export default function Example() {
                   Services
                 </Link>
                 <Link
-                  href="/getquote"
+                  href="/contactus"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`text-sm font-semibold ${
-                    isActive("/getquote") ? "text-red-600" : "text-gray-900"
+                    isActive("/contactus") ? "text-red-600" : "text-gray-900"
                   }`}
                 >
-                  Get a Quote
+                  Contact us
                 </Link>
               </div>
             </div>
