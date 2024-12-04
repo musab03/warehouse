@@ -28,7 +28,7 @@ export default function HeroBanner() {
       className="relative bg-[url('https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_960_720.jpg')] bg-cover bg-center bg-no-repeat h-[80vh] flex items-center justify-center overflow-hidden"
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70" aria-hidden="true"></div>
+      <div className="absolute inset-0 " aria-hidden="true"></div>
 
       {/* Circular Progress */}
       <div className="absolute bottom-12 right-12 w-32 h-32 rounded-full flex items-center justify-center">

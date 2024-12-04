@@ -1,98 +1,112 @@
-import React from 'react';
-import { FaWarehouse, FaTv, FaFireExtinguisher, FaTruckLoading, FaMapMarkedAlt, FaClock } from "react-icons/fa";
-import { GiSecurityGate, GiForklift } from "react-icons/gi";
+"use client"
+import React from "react";
+import { FaLandmark, FaWarehouse, FaMapMarkerAlt, FaUserShield, FaCamera, FaFireExtinguisher, FaTruckLoading, FaHandHoldingUsd } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import { GiCctvCamera } from "react-icons/gi";
 
-const WarehouseFeatures: React.FC = () => {
+const features = [
+  {
+    title: "2 Acre Land",
+    description: "Our facility is spread over 2 acres of secure and well-maintained land.",
+    icon: <FaLandmark size={36} className="text-primary" />,
+    link: "#acre-land",
+  },
+  {
+    title: "70,000 SQ FT RCC Shed",
+    description: "We offer a spacious 70,000 sq ft RCC shed for industrial or storage needs.",
+    icon: <FaWarehouse size={36} className="text-primary" />,
+    link: "#rcc-shed",
+  },
+  {
+    title: "35,000 SQ FT Open Area",
+    description: "Ample open space available for outdoor activities, parking, or logistics.",
+    icon: <FaMapMarkerAlt size={36} className="text-primary" />,
+    link: "#open-area",
+  },
+  {
+    title: "24/7 Armed & Unarmed Security",
+    description: "Our premises are protected round the clock by armed and unarmed security guards.",
+    icon: <FaUserShield size={36} className="text-primary" />,
+    link: "#security",
+  },
+  {
+    title: "CCTV Facility",
+    description: "State-of-the-art CCTV surveillance systems cover the entire premises.",
+    icon: <GiCctvCamera size={36} className="text-primary" />,
+    link: "#cctv",
+  },
+  {
+    title: "Fire Extinguisher Available",
+    description: "Our facility is equipped with fire extinguishers to ensure safety.",
+    icon: <FaFireExtinguisher size={36} className="text-primary" />,
+    link: "#fire-extinguisher",
+  },
+  {
+    title: "Loading & Unloading Facility",
+    description: "We provide efficient loading and unloading facilities for all types of vehicles.",
+    icon: <FaTruckLoading size={36} className="text-primary" />,
+    link: "#loading-facility",
+  },
+  {
+    title: "Lifter Facility",
+    description: "On-site lifters are available to assist with heavy equipment and materials.",
+    icon: <FaHandHoldingUsd size={36} className="text-primary" />,
+    link: "#lifter-facility",
+  },
+];
+
+const ServiceCard = ({ title, description, icon, link }:any) => {
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push(`/servicepage${link}`);
+  };
+
   return (
-    <section className="bg-blue-900 text-white py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Title Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Our Warehouse Features</h2>
-          <p className="text-lg leading-relaxed max-w-2xl mx-auto">
-            Our warehouse is situated at SITE Ltd, a prime location just 7 miles from the custom house. 
-            With 40 years of operation, we provide both "Public Custom Bonded Warehouse" and "Public Private Warehouse" services.
-          </p>
+    <div
+      onClick={handleRedirect}
+      className="w-full px-4 md:w-1/2 lg:w-1/3 cursor-pointer transition-transform transform  hover:scale-105 md:py-5 py-2"
+    >
+      <div className="mb-10 flex h-full flex-col rounded-lg bg-white p-8 shadow-lg transition-all duration-300 hover:bg-gradient-to-bl from-red-600 via-transparen">
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary bg-opacity-20">
+          {icon}
         </div>
+        <h3 className="mb-4 text-xl font-semibold text- :text-white">
+          {title}
+        </h3>
+        <p className="text-base text-body-color :text--6">{description}</p>
+      </div>
+    </div>
+  );
+};
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Feature Card */}
-          <div className="flex items-center space-x-4">
-            <FaMapMarkedAlt className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Prime Location</h3>
-              <p className="text-sm">Located 7 miles from the custom house</p>
+const Service = () => {
+  return (
+    <section className="">
+      <div className="md:pt-5 container  mx-auto max-w-[100rem]">
+        <div className="-mx-4 flex flex-wrap">
+          <div className="w-full px-4">
+            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-5">
+              <span className="mb-2 block text-lg font-semibold text-primary">
+                Our Facilities
+              </span>
+              <h2 className="mb-3 text-3xl font-bold leading-[1.2]  sm:text-4xl md:text-[40px]">
+                What We Offer
+              </h2>
+              <p className="text-base text-body-color ">
+                Explore our wide range of facilities designed to meet your business needs.
+              </p>
             </div>
           </div>
-
-          <div className="flex items-center space-x-4">
-            <FaWarehouse className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Spacious Facility</h3>
-              <p className="text-sm">2-acre land with a 70,000 SQ FT RCC shed</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <FaClock className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">40 Years of Experience</h3>
-              <p className="text-sm">Serving the industry for over 4 decades</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <FaTv className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">CCTV Surveillance</h3>
-              <p className="text-sm">24/7 monitoring for security</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <GiSecurityGate className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Round-the-Clock Security</h3>
-              <p className="text-sm">Armed and unarmed guards available</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <FaFireExtinguisher className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Fire Safety</h3>
-              <p className="text-sm">Fire extinguishers available</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <FaTruckLoading className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Loading & Unloading</h3>
-              <p className="text-sm">Facilities for smooth operations</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <GiForklift className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Lifter Facility</h3>
-              <p className="text-sm">For handling heavy items efficiently</p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <FaWarehouse className="text-white text-5xl" />
-            <div>
-              <h3 className="text-xl font-semibold">Open Storage Area</h3>
-              <p className="text-sm">35,000 SQ FT open area for versatile use</p>
-            </div>
-          </div>
+        </div>
+        <div className="-mx-4 flex flex-wrap">
+          {features.map((feature, index) => (
+            <ServiceCard key={index} {...feature} />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default WarehouseFeatures;
+export default Service;

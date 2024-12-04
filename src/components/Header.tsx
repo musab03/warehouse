@@ -4,24 +4,38 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Get current route
+import { usePathname } from "next/navigation";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Check if link is active
-  const isActive = (path:any) => pathname === path;
+  // Determine if the current route matches the given path
+  const isActive = (path: string) => pathname === path;
 
-  // Handle scroll event
+  // Handle scroll event to update the header style
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10); // Change header on scroll
+      setIsScrolled(window.scrollY > 10); // Set to true if scrolled more than 10px
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Base styles for navigation links
+  const linkBaseStyle =
+    "text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600";
+
+  // Generate class names for links dynamically based on their state
+  const getLinkClassName = (path: string) =>
+    `${linkBaseStyle} ${
+      isActive(path)
+        ? "text-red-600 text-3xl"
+        : isScrolled
+        ? "text-black"
+        : "text-white"
+    }`;
 
   return (
     <header
@@ -33,10 +47,15 @@ export default function Example() {
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
+        {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Home</span>
-            <img alt="Logo" src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" className="h-6 w-auto" />
+            <img
+              alt="Logo"
+              src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
+              className="h-6 w-auto"
+            />
           </Link>
         </div>
 
@@ -54,52 +73,16 @@ export default function Example() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-12 cursor-pointer">
-          <Link
-            href="/"
-            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
-              isActive("/")
-                ? "text-red-600 text-3xl"
-                : isScrolled
-                ? "text-black"
-                : "text-white"
-            }`}
-          >
+          <Link href="/" className={getLinkClassName("/")}>
             Home
           </Link>
-          <Link
-            href="/about"
-            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
-              isActive("/about")
-                ? "text-red-600 text-3xl"
-                : isScrolled
-                ? "text-black"
-                : "text-white"
-            }`}
-          >
+          <Link href="/about" className={getLinkClassName("/about")}>
             About
           </Link>
-          <Link
-            href="/services"
-            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
-              isActive("/services")
-                ? "text-red-600 text-3xl"
-                : isScrolled
-                ? "text-black"
-                : "text-white"
-            }`}
-          >
+          <Link href="/servicepage" className={getLinkClassName("/servicepage")}>
             Services
           </Link>
-          <Link
-            href="/getquote"
-            className={`text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600 ${
-              isActive("/getquote")
-                ? "text-red-600 text-3xl"
-                : isScrolled
-                ? "text-black"
-                : "text-white"
-            }`}
-          >
+          <Link href="/getquote" className={getLinkClassName("/getquote")}>
             Get a Quote
           </Link>
         </div>
@@ -108,10 +91,9 @@ export default function Example() {
       {/* Mobile Menu */}
       <Dialog
         open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
         className="lg:hidden"
       >
-        <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
@@ -153,10 +135,10 @@ export default function Example() {
                   About
                 </Link>
                 <Link
-                  href="/services"
+                  href="/servicepage"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`text-sm font-semibold ${
-                    isActive("/services") ? "text-red-600" : "text-gray-900"
+                    isActive("/servicepage") ? "text-red-600" : "text-gray-900"
                   }`}
                 >
                   Services
