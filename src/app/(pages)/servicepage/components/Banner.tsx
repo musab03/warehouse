@@ -4,7 +4,7 @@ const Banner = () => {
    
   return (
     <section
-      className="relative bg-[url('https://cdn.pixabay.com/photo/2015/11/06/11/48/warehouse-1026496_1280.jpg')] bg-cover bg-center bg-no-repeat max-w-[100rem] w-full mx-auto h-[80vh] flex items-center justify-center overflow-hidden"
+      className="relative bg-[url('https://cdn.pixabay.com/photo/2024/04/18/10/09/ai-generated-8704020_960_720.jpg')] bg-cover bg-center bg-no-repeat max-w-[100rem] w-full mx-auto h-[80vh] flex items-center justify-center overflow-hidden"
     >
 
       
