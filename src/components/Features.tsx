@@ -82,8 +82,8 @@ const ServiceCard = ({ title, description, icon, link }:any) => {
 
 const Service = () => {
   return (
-    <section className="">
-      <div className="md:pt-5 container  mx-auto max-w-[100rem]">
+    <section className="mx-auto max-w-[100rem] w-full flex items-center justify-center">
+      <div className="md:pt-5 container  ">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-5">
