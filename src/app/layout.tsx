@@ -34,7 +34,7 @@ export default function RootLayout({
         <head>
         {/* Add viewport meta tag for responsiveness */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script>document.documentElement.classList.add('js')</script>
+        <script>document.documentElement.classList.add(&apos;js&apos;)</script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

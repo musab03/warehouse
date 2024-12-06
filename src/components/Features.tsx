@@ -4,7 +4,12 @@ import { FaLandmark, FaWarehouse, FaMapMarkerAlt, FaUserShield,  FaFireExtinguis
 import { useRouter } from "next/navigation";
 import { GiCctvCamera } from "react-icons/gi";
 import { MdForklift } from "react-icons/md";
-
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode; // Assuming `icon` is a React component or element
+  link: string;
+}
 const features = [
   {
     title: "2 Acre Land",
@@ -56,7 +61,7 @@ const features = [
   },
 ];
 
-const ServiceCard = ({ title, description, icon, link }:any) => {
+const ServiceCard = ({ title, description, icon, link }:ServiceCardProps) => {
   const router = useRouter();
 
   const handleRedirect = () => {

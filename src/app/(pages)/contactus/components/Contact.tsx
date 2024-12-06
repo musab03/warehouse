@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from "react-toastify";
@@ -49,7 +48,7 @@ export default function ContactUshtmlForm() {
           })
         }
     } catch (error) {
-      toast.success("Something went wrong");
+      toast.error("Something went wrong");
     } finally {
         setIsSubmitting(false);
     }

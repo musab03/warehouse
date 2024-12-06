@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState, useRef, RefCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import Banner from "./components/Banner";
 
 // Define the type for a service item

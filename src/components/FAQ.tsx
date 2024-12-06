@@ -3,13 +3,14 @@
 import React, { useEffect, useState } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from 'next/image';
 
 function FAQ() {
   // State to keep track of which accordion is open
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState<number | null>(null);
 
   // Toggle function to open/close the accordion
-  const toggleAccordion = (index:any) => {
+  const toggleAccordion = (index: number) => {
     setOpen(open === index ? null : index); // Close the accordion if it's already open, otherwise open it
   }
   useEffect(() => {
@@ -30,7 +31,7 @@ function FAQ() {
             <p className="mt-1 hidden md:block text-black :text-neutral-400">
               Answers to the most frequently asked questions.
             </p>
-            <img src="https://static.vecteezy.com/system/resources/previews/047/492/151/non_2x/a-man-thinking-about-a-question-3d-photo-free-png.png" alt="" className='hidden sm:block'/>
+            <Image src="https://static.vecteezy.com/system/resources/previews/047/492/151/non_2x/a-man-thinking-about-a-question-3d-photo-free-png.png" alt="" className='hidden sm:block'/>
           </div>
 
         </div>

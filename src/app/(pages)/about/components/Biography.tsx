@@ -41,7 +41,7 @@ const HeroSection = () => {
             behind the scenes, so you can focus on growing your business. With a
             skilled team, cutting-edge technology, and years of industry
             experience, we&apos;re committed to helping you not just meet, but exceed
-            your customers' expectations. At Tulip, we&apos;re here to help you grow
+            your customers&apos; expectations. At Tulip, we&apos;re here to help you grow
             and thrive.
           </p>
           <div className="text-5xl font-bold text-blue-600">
