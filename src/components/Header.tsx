@@ -25,13 +25,13 @@ export default function Example() {
 
   // Base styles for navigation links
   const linkBaseStyle =
-    "text-2xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600";
+    "text-xl font-semibold rounded-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-red-600";
 
   // Generate class names for links dynamically based on their state
   const getLinkClassName = (path: string) =>
     `${linkBaseStyle} ${
       isActive(path)
-        ? "text-red-600 text-3xl"
+        ? "text-red-600 text-2xl"
         : isScrolled
         ? "text-black"
         : "text-white"
@@ -50,12 +50,12 @@ export default function Example() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Home</span>
-            <img
+            {/* <span className="sr-only">Home</span> */}
+            {/* <img
               alt="Logo"
               src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
               className="h-6 w-auto"
-            />
+            /> */}
           </Link>
         </div>
 
@@ -96,14 +96,14 @@ export default function Example() {
       >
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            {/* <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Home</span>
               <img
                 alt="Logo"
                 src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
                 className="h-8 w-auto"
               />
-            </Link>
+            </Link> */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
