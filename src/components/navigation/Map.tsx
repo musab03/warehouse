@@ -2,7 +2,7 @@ import React from 'react';
 
 const Map: React.FC = () => {
   return (
-    <div className="font-bold text-center mx-auto max-w-6xl items-center">
+    <div className="font-bold text-center mx-auto max-w-7xl items-center mb-5">
       <h1 className="sm:text-2xl md:text-4xl inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
         Find Us
       </h1>

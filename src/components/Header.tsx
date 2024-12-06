@@ -82,7 +82,7 @@ export default function Example() {
           <Link href="/servicepage" className={getLinkClassName("/servicepage")}>
             Services
           </Link>
-          <Link href="/contactus" className={getLinkClassName("/contactus")}>
+          <Link href="/contactus" className={`${getLinkClassName("/contactus")}`}>
             Contact us
           </Link>
         </div>
