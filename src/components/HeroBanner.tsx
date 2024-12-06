@@ -15,7 +15,7 @@ export default function HeroBanner() {
 
   return (
     <section
-      className="relative bg-[url('https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_960_720.jpg')] bg-cover bg-center bg-no-repeat h-[80vh] flex items-center justify-center overflow-hidden"
+      className="relative bg-[url('https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_960_720.jpg')] bg-cover bg-center bg-no-repeat h-[50rem] w-full max-w-[100rem] mx-auto flex items-center justify-center overflow-hidden"
     >
       {/* Overlay */}
       <div className="absolute inset-0 " aria-hidden="true"></div>
