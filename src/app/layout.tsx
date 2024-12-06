@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import WhatsAppButton from "@/components/navigation/WhatsappButton";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 
 const geistSans = localFont({
@@ -39,11 +40,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         
    <Header/>
         {children}
         <WhatsAppButton />
         <Footer/>
-        <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+        
       </body>
     </html>
   );

@@ -31,7 +31,7 @@ function FAQ() {
             <p className="mt-1 hidden md:block text-black :text-neutral-400">
               Answers to the most frequently asked questions.
             </p>
-            <Image src="https://static.vecteezy.com/system/resources/previews/047/492/151/non_2x/a-man-thinking-about-a-question-3d-photo-free-png.png" alt="" className='hidden sm:block'/>
+            <img  src="https://static.vecteezy.com/system/resources/previews/047/492/151/non_2x/a-man-thinking-about-a-question-3d-photo-free-png.png" alt="" className='hidden sm:block'/>
           </div>
 
         </div>
