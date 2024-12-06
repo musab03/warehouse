@@ -48,6 +48,7 @@ export default function ContactUshtmlForm() {
           })
         }
     } catch (error) {
+      console.error(error);
       toast.error("Something went wrong");
     } finally {
         setIsSubmitting(false);
