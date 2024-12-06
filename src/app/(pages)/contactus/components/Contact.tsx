@@ -40,6 +40,13 @@ export default function ContactUshtmlForm() {
         );
         if (result.text === 'OK') {
           toast.success("Form submitted successfully!");
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            company: '',
+            description:''
+          })
         }
     } catch (error) {
       toast.success("Something went wrong");
@@ -55,7 +62,9 @@ export default function ContactUshtmlForm() {
         }`}
       
     >
+      <div className="flex z-50">
       <ToastContainer />
+      </div>
       <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
         {/* <!-- Grid --> */}
         <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
