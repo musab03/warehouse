@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from 'next/image';
+
 
 function FAQ() {
   // State to keep track of which accordion is open
