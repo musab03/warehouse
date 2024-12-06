@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Navigation Links */}
-          <div>
+          {/* <div>
             <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
             <ul className="space-y-2">
               <li><a href="/about" className="hover:underline">About Us</a></li>
@@ -24,10 +24,10 @@ const Footer: React.FC = () => {
               <li><a href="/contact" className="hover:underline">Contact</a></li>
               <li><a href="/faq" className="hover:underline">FAQ</a></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Social Media */}
-          <div>
+          {/* <div>
             <h2 className="text-lg font-semibold mb-2">Follow Us</h2>
             <div className="flex justify-center md:justify-start space-x-4">
               <a href="#" aria-label="Facebook" className="hover:opacity-75">
@@ -41,11 +41,15 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
+        </div> */}
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Warehouse & Bond. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Warehouse & Bond. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

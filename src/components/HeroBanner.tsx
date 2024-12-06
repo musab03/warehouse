@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function HeroBanner() {
   const [animate, setAnimate] = useState(false);
-  const [progress, setProgress] = useState(0);
+  
 
   useEffect(() => {
     setAnimate(true);
@@ -15,23 +15,18 @@ export default function HeroBanner() {
 
   return (
     <section
-      className="relative bg-[url('https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_960_720.jpg')] bg-cover bg-center bg-no-repeat h-[50rem] w-full  mx-auto flex items-center justify-center overflow-hidden"
+      className={`relative bg-[url('https://cdn.pixabay.com/photo/2016/11/21/13/20/port-1845350_960_720.jpg')] bg-cover bg-center bg-no-repeat h-[50rem] w-full max-w-[100rem]  mx-auto flex items-center justify-center overflow-hidden transform transition-all duration-500 ease-out ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      
     >
       {/* Overlay */}
       <div className="absolute inset-0 " aria-hidden="true"></div>
 
       {/* Circular Progress */}
-      <div className="absolute bottom-12 right-12 w-32 h-32 rounded-full flex items-center justify-center">
-       
-        <div className="flex flex-col items-center">
-          <span className="text-3xl font-bold text-white">{progress}</span>
-          <span className="text-lg text-gray-200">Years</span>
-        </div>
-      </div>
+      
 
       {/* Hero Content */}
       <div
-        className={`relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 text-center transform transition-all duration-1000 ease-out ${
+        className={`relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 text-center transform transition-all duration-500 ease-out ${
           animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
