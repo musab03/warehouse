@@ -12,7 +12,7 @@ const page = () => {
 
         <HeroBanner />
         <Features/>
-        <Clients />
+        <Clients/>
       
         <Card /> 
         <FAQ/>

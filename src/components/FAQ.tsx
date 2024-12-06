@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function FAQ() {
   // State to keep track of which accordion is open
@@ -10,9 +12,15 @@ function FAQ() {
   const toggleAccordion = (index:any) => {
     setOpen(open === index ? null : index); // Close the accordion if it's already open, otherwise open it
   }
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation (in milliseconds)
+      once: true, // Whether animation should happen only once
+    });
+  },[])
 
   return (
-    <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-gradient-to-bl from-red-600 via-transparent">
+    <div data-aos="fade-left" className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-gradient-to-bl from-red-600 via-transparent">
       <div className="grid md:grid-cols-5 gap-10">
         <div className="md:col-span-2">
           <div className="max-w-xs">
@@ -38,9 +46,9 @@ function FAQ() {
           "A custom bonded warehouse is a secure facility where imported goods can be stored without paying duties and taxes until released for local consumption. This helps manage cash flow, store goods securely, and defer customs payments."
       },
       {
-        question: "What types of goods can be stored in Tulip Bond’s custom warehouse?",
+        question: "What types of goods can be stored in Tulip Bond&apos;s custom warehouse?",
         answer:
-          "Tulip Bond’s warehouse accommodates a wide range of goods, including perishable items, electronics, industrial equipment, and raw materials, with temperature-controlled and secure storage options."
+          "Tulip Bond&apos;s warehouse accommodates a wide range of goods, including perishable items, electronics, industrial equipment, and raw materials, with temperature-controlled and secure storage options."
       },
       {
         question: "How long can goods be stored in your bonded warehouse?",
@@ -48,7 +56,7 @@ function FAQ() {
           "Goods can typically be stored in our bonded warehouse for up to 5 years, depending on customs regulations. During this period, you can re-export, process, or release them after paying the required duties."
       },
       {
-        question: "What security measures are in place at Tulip Bond’s warehouse?",
+        question: "What security measures are in place at Tulip Bond&apos;s warehouse?",
         answer:
           "Our warehouse is equipped with 24/7 surveillance, controlled access, and fire suppression systems to ensure the safety and integrity of your goods."
       },

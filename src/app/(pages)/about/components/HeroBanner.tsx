@@ -1,9 +1,18 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroBanner = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation (in milliseconds)
+      once: true, // Whether animation should happen only once
+    });
+  },[])
   return (
     <section
-    className=" bg-[url('https://cdn.pixabay.com/photo/2015/11/06/11/48/warehouse-1026496_1280.jpg')] bg-cover bg-center bg-no-repeat w-full max-w-[100rem] mx-auto h-[80vh] flex items-center justify-center overflow-hidden"
+    data-aos="fade-left" className="bg-[url('https://cdn.pixabay.com/photo/2015/11/06/11/48/warehouse-1026496_1280.jpg')] bg-cover bg-center bg-no-repeat w-full max-w-[100rem] mx-auto h-[80vh] flex items-center justify-center overflow-hidden"
   >
 
     

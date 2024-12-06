@@ -50,70 +50,63 @@ export default function Example() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            {/* <span className="sr-only">Home</span> */}
-            {/* <img
-              alt="Logo"
-              src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-              className="h-6 w-auto"
-            /> */}
+            {/* Logo can go here */}
           </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
-        
-            <div className="flex lg:hidden">
-          
+        <div className="flex lg:hidden">
+          {/* Only show Bars3Icon when mobileMenuOpen is false */}
+          {!mobileMenuOpen && (
             <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-          </button>
-              
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+            </button>
+          )}
+
+          {/* Only show XMarkIcon when mobileMenuOpen is true */}
         </div>
-              
-              {/* Desktop Navigation */}
-              <div className="hidden lg:flex lg:gap-x-12 cursor-pointer">
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex lg:gap-x-12 cursor-pointer">
           <Link href="/" className={getLinkClassName("/")}>
             Home
           </Link>
           <Link href="/about" className={getLinkClassName("/about")}>
             About
           </Link>
-          <Link href="/servicepage" className={getLinkClassName("/servicepage")}>
-               
+          <Link
+            href="/servicepage"
+            className={getLinkClassName("/servicepage")}
+          >
             Services
           </Link>
-          <Link href="/contactus" className={`${getLinkClassName("/contactus")}`}>
+          <Link
+            href="/contactus"
+            className={`${getLinkClassName("/contactus")}`}
+          >
             Contact us
           </Link>
         </div>
-              
       </nav>
 
       {/* Mobile Menu */}
       <Dialog
-      open={mobileMenuOpen}
-      onClose={() => setMobileMenuOpen(false)}
-      className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        className="lg:hidden"
       >
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            {/* <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Home</span>
-              <img
-              alt="Logo"
-              src="https://cdn.brandfetch.io/idfBvvT77O/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-              className="h-8 w-auto"
-              />
-            </Link> */}
+          <div className="flex items-center justify-end">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
+            >
               <span className="sr-only">Close menu</span>
               <XMarkIcon aria-hidden="true" className="h-6 w-6" />
             </button>
@@ -127,7 +120,7 @@ export default function Example() {
                   className={`text-sm font-semibold ${
                     isActive("/") ? "text-red-600" : "text-gray-900"
                   }`}
-                  >
+                >
                   Home
                 </Link>
                 <Link
@@ -136,7 +129,7 @@ export default function Example() {
                   className={`text-sm font-semibold ${
                     isActive("/about") ? "text-red-600" : "text-gray-900"
                   }`}
-                  >
+                >
                   About
                 </Link>
                 <Link
@@ -145,7 +138,7 @@ export default function Example() {
                   className={`text-sm font-semibold ${
                     isActive("/servicepage") ? "text-red-600" : "text-gray-900"
                   }`}
-                  >
+                >
                   Services
                 </Link>
                 <Link
@@ -154,7 +147,7 @@ export default function Example() {
                   className={`text-sm font-semibold ${
                     isActive("/contactus") ? "text-red-600" : "text-gray-900"
                   }`}
-                  >
+                >
                   Contact us
                 </Link>
               </div>

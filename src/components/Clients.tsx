@@ -1,18 +1,26 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Clients() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation (in milliseconds)
+      once: true, // Whether animation should happen only once
+    });
+  },[])
   return (
     <>
       <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6">
+        <div data-aos="fade-up" className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6">
           <h1 className=" text-xl md:text-3xl font-bold  text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500 ">Our Clients</h1>
           <h2 className="text-zinc-900 className:text-neutral-400 sm:text-lg md:text-xl ">
           Trusted by logistics professionals, businesses, and more than 99,000 warehouse operators worldwide.
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-x-6">
+        <div data-aos="fade-right" className="grid grid-cols-3 md:grid-cols-6 gap-x-6">
           <img
             className="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 className:text-neutral-500"
             src="https://cdn.brandfetch.io/idv0ZbfQqf/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
@@ -55,7 +63,7 @@ function Clients() {
            
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-x-6 sm:gap-x-6">
+        <div data-aos="fade-left" className="grid grid-cols-3 md:grid-cols-5 gap-x-6 sm:gap-x-6">
           <img
             className="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto text-gray-500 className:text-neutral-500"
             src="https://cdn.brandfetch.io/idvUUwP3ul/w/1900/h/447/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"
@@ -87,29 +95,6 @@ function Clients() {
           />
           
         </div>
-
-        {/* <div className="mt-8 text-center">
-          <a
-            className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none className:bg-neutral-900 className:border-neutral-700 className:text-white className:hover:bg-neutral-800 className:focus:bg-neutral-800"
-            href="#"
-          >
-            Read case studies
-            <svg
-              className="shrink-0 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </a>
-        </div> */}
       </div>
     </>
   );

@@ -26,7 +26,7 @@ export default function HeroBanner() {
 
       {/* Hero Content */}
       <div
-        className={`relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 text-center transform transition-all duration-500 ease-out ${
+        className={`z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 text-center transform transition-all duration-500 ease-out ${
           animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -39,9 +39,7 @@ export default function HeroBanner() {
         <p className="mt-4  text-gray-300 max-w-2xl mx-auto leading-relaxed text-xl md:text-3xl ">
           Custom Bonded & Private Warehouse
         </p>
-        <p className="mt-4  text-gray-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-lg ">
-        Dedicated to service since......1984  
-        </p>
+       
         <div className="mt-6 flex justify-center">
           <Link
             href="/contactus"

@@ -57,15 +57,15 @@ export default function ContactUshtmlForm() {
   return (
     // <!-- Hero -->
     <div
-    className={`relative bg-gradient-to-bl from-red-600 via-transparent  ${
+    className={` w-full bg-gradient-to-bl from-red-600 via-transparent  ${
       animate ? 'animate-slide-down' : ''
         }`}
       
     >
-      <div className="flex z-50">
+      
       <ToastContainer />
-      </div>
-      <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
+      
+      <div className="px-4 w-full py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
         {/* <!-- Grid --> */}
         <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
           <div>
@@ -143,6 +143,7 @@ export default function ContactUshtmlForm() {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
+                        required
                         
                       />
                       <label
@@ -212,7 +213,8 @@ export default function ContactUshtmlForm() {
                         placeholder="you@email.com"
                         name="email"
                           value={formData.email}
-                          onChange={handleChange}
+                        onChange={handleChange}
+                        required
                           
                       />
                       <label

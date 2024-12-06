@@ -1,8 +1,9 @@
 "use client"
 import React from "react";
-import { FaLandmark, FaWarehouse, FaMapMarkerAlt, FaUserShield, FaCamera, FaFireExtinguisher, FaTruckLoading, FaHandHoldingUsd } from "react-icons/fa";
+import { FaLandmark, FaWarehouse, FaMapMarkerAlt, FaUserShield,  FaFireExtinguisher, FaTruckLoading} from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { GiCctvCamera } from "react-icons/gi";
+import { MdForklift } from "react-icons/md";
 
 const features = [
   {
@@ -50,7 +51,7 @@ const features = [
   {
     title: "Lifter Facility",
     description: "On-site lifters are available to assist with heavy equipment and materials.",
-    icon: <FaHandHoldingUsd size={36} className="text-primary" />,
+    icon: <MdForklift  size={36} className="text-primary" />,
     link: "#lifter-facility",
   },
 ];
@@ -82,7 +83,7 @@ const ServiceCard = ({ title, description, icon, link }:any) => {
 
 const Service = () => {
   return (
-    <section className=" mx-auto flex  w-full items-center justify-center">
+    <section className="mx-auto flex  w-full items-center justify-center">
       <div className="md:pt-5 container  ">
         <div className="flex flex-wrap">
           <div className="w-full px-4">

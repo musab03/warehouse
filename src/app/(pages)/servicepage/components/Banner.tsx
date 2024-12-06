@@ -1,10 +1,19 @@
-
+"use client";
+import { useEffect } from "react"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
-   
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation (in milliseconds)
+      once: true, // Whether animation should happen only once
+    });
+   },[])
   return (
     <section
-      className="relative bg-[url('https://cdn.pixabay.com/photo/2024/04/18/10/09/ai-generated-8704020_960_720.jpg')] bg-cover bg-center bg-no-repeat max-w-[100rem] w-full mx-auto h-[80vh] flex items-center justify-center overflow-hidden"
+    data-aos="fade-right"
+      className="bg-[url('https://cdn.pixabay.com/photo/2024/04/18/10/09/ai-generated-8704020_960_720.jpg')] bg-cover bg-center bg-no-repeat max-w-[100rem] w-full mx-auto h-[80vh] flex items-center justify-center overflow-hidden"
     >
 
       

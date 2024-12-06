@@ -1,7 +1,16 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 function Card() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animation (in milliseconds)
+      once: true, // Whether animation should happen only once
+    });
+  },[])
   return (
     <>
       <div className="max-w-[100rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
@@ -135,14 +144,15 @@ function Card() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative">
-                <div>
+              <div  className="relative">
+                <div data-aos="fade-right">
                   <div
                     id="tabs-with-card-1"
                     role="tabpanel"
                     aria-labelledby="tabs-with-card-item-1"
                   >
                     <img
+                      
                       className="shadow-xl shadow-gray-200 rounded-xl className:shadow-gray-900/20"
                       src="https://images.pexels.com/photos/2881632/pexels-photo-2881632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                       alt="Features Image"
