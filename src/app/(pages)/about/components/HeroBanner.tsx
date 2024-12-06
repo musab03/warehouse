@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from '../../servicepage/components/Banner'
 
 const HeroBanner = () => {
   return (
