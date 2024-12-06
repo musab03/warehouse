@@ -82,24 +82,24 @@ const ServiceCard = ({ title, description, icon, link }:any) => {
 
 const Service = () => {
   return (
-    <section className="">
-      <div className="md:pt-5 container  mx-auto max-w-[100rem]">
-        <div className="-mx-4 flex flex-wrap">
+    <section className=" mx-auto flex  w-full items-center justify-center">
+      <div className="md:pt-5 container  ">
+        <div className="flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-5">
-              <span className="mb-2 block text-lg font-semibold text-primary">
+            <div className="mx-auto mb-12  text-center lg:mb-5">
+              <span className="mb-2 mt-5 md:mt-0 block text-xl font-semibold text-primary">
                 Our Facilities
               </span>
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2]  sm:text-4xl md:text-[40px]">
+              <h2 className="mb-3 text-3xl font-bold   sm:text-4xl md:text-[40px]">
                 What We Offer
               </h2>
-              <p className="text-base text-body-color ">
+              <p className=" text-lg text-body-color ">
                 Explore our wide range of facilities designed to meet your business needs.
               </p>
             </div>
           </div>
         </div>
-        <div className="-mx-4 flex flex-wrap">
+        <div className=" flex flex-wrap">
           {features.map((feature, index) => (
             <ServiceCard key={index} {...feature} />
           ))}
