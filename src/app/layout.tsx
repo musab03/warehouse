@@ -45,7 +45,7 @@ export default function RootLayout({
         {children}
         <WhatsAppButton />
         <Footer/>
-        
+         
       </body>
     </html>
   );
